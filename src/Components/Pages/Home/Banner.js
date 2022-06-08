@@ -3,7 +3,7 @@ import myimage from "../../../image/my-image.png";
 
 const Banner = () => {
   return (
-    <div className="bg-primary ">
+    <section className="bg-primary " id="home">
       <div class="hero min-h-screen md:w-4/5 lg:w-4/5 w-full mx-auto">
         <div class="hero-content flex-col flex-row-reverse md:flex-row  lg:flex-row">
           <div className="flex-1 flex justify-center md:justify-start items-center">
@@ -11,7 +11,7 @@ const Banner = () => {
               <h1 class="text-5xl font-bold text-base-100 text-center md:text-left">
                 I'm Hossain Mohammad Rahim
               </h1>
-              <p className="text-base-100 mt-2 text-center md:text-left">
+              <p className="text-base-100 mt-2 text-2xl text-center md:text-left">
                 I'm a{" "}
                 <span className="text-secondary">full stack web developer</span>
               </p>
@@ -32,7 +32,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

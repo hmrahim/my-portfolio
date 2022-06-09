@@ -33,6 +33,11 @@ const Services = () => {
       name:"Full-Stack Development",
       desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
     },
+    {
+      icon:incon2,
+      name:"Mern Stack",
+      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+    },
   ]
   return (
     <section id="services" className="">

@@ -1,5 +1,6 @@
 import React from "react";
 import myimage from "../../../image/my-image.png";
+import Typed from "react-typed"
 
 const Banner = () => {
   return (
@@ -13,7 +14,20 @@ const Banner = () => {
               </h1>
               <p className="text-base-100 mt-2 text-2xl text-center md:text-left">
                 I'm a{" "}
-                <span className="text-secondary">full stack web developer</span>
+                <span className="text-secondary">
+                <Typed
+      strings={[
+            "Full Stack Developer.",
+            "Front-end Developer.",
+            "Backend Developer.",
+            "Mern stack Developer.",
+           
+          ]}
+          typeSpeed={100}
+          backSpeed={50}
+          loop
+        />
+                </span>
               </p>
               <p class="py-6 text-base-100 text-center md:text-left">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut

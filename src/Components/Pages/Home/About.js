@@ -104,7 +104,7 @@ const About = () => {
            
              
             </div>
-            <button class="btn btn-secondary rounded-full">Dawonload Resume</button>
+            <a href="https://drive.google.com/file/d/1YKGbssa_Ab4jL2zpHXaCVADPZ8xedEOS/view?usp=sharing" target="_blank" class="btn btn-secondary rounded-full">Dawonload Resume</a>
           </div>
         </div>
       </div>

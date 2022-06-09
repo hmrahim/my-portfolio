@@ -48,7 +48,7 @@ const Testimonial = () => {
       
       ]
   return (
-    <div className="w-full mt-10 bg-primary py-10 pt-0">
+    <div className="w-full mt-10 bg-primary py-10 pt-0" id="testimonial">
       <h1 className="text-4xl font-semibold text-center text-base-100 my-5 pt-5">
         Clients Testimonials
       </h1>

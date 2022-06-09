@@ -5,23 +5,23 @@ const Header = () => {
   const menu = (
     <>
       <li>
-        <a className="text-">Home</a>
+        <a href="#home" className="text-">Home</a>
       </li>
 
       <li>
-        <a className="text-">About</a>
+        <a href="#about" className="text-">About</a>
       </li>
       <li>
-        <a className="text-">Services</a>
+        <a href="#services" className="text-">Services</a>
       </li>
       <li>
-        <a className="text-">Projects</a>
+        <a href="#projects" className="text-">Projects</a>
       </li>
       <li>
         <a className="text-">Resume</a>
       </li>
       <li>
-        <a className="text-">Testimonial</a>
+        <a href="#testimonial" className="text-">Testimonial</a>
       </li>
       <li>
         <a className="text-">Contact</a>

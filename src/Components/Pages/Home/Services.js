@@ -11,33 +11,29 @@ const Services = () => {
     {
       icon:incon5,
       name:"Back-end Development",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
     },
     {
       icon:incon4,
       name:"Front-end Development",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+      desc:"I can develop fast and fully responsive single page React web apps with routing(protected and nested), authentication etc."
     },
     {
       icon:incon3,
       name:"Web Design",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+      desc:"I can develop pixel perfect fully responsive websites with HTML and CSS from provided figma design."
     },
     {
       icon:incon2,
       name:"Mern Stack",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
     },
     {
       icon:incon1,
       name:"Full-Stack Development",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
+      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
     },
-    {
-      icon:incon2,
-      name:"Mern Stack",
-      desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe reiciendis inventore molestias rerum sint nesciunt reprehenderitbeatae esse dolore qui veritatis magnam fuga possimus eos porro, sedperferendis officia mollitia!"
-    },
+  
   ]
   return (
     <section id="services" className="">
@@ -45,12 +41,12 @@ const Services = () => {
         <h1 className="text-center text-4xl font-semibold mb-5">
           Awesome Services
         </h1>
-        <p className="text-center w-full md:w-7/12 mx-auto">
+        {/* <p className="text-center w-full md:w-7/12 mx-auto">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe,
           reiciendis inventore molestias rerum sint nesciunt reprehenderit
           beatae esse dolore qui veritatis magnam fuga possimus eos porro, sed
           perferendis officia mollitia!
-        </p>
+        </p> */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-10">
           {
             services.map((service,index)=> <Service key={index}  service={service}/>)

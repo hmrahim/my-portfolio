@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({project}) => {
     return (
@@ -14,8 +15,13 @@ const ProjectCard = ({project}) => {
           <p className="text-base-100">
             {project.tec}
           </p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-secondary">Visit website</button>
+          <div class="card-actions justify-center">
+            <a href={`${project.linkf}`} target="_blank" class="btn btn-secondary btn-xs capitalize">Client</a>
+            {
+              project.linkb &&  <a href={`${project.linkb}`} target="_blank" class="btn btn-secondary btn-xs capitalize">Server</a>
+            }
+           
+            <a href={`${project.livelink}`} target="_blank" class="btn btn-secondary btn-xs capitalize">Live website</a>
           </div>
         </div>
       </div>

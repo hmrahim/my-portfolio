@@ -11,7 +11,7 @@ import user5 from "../../../image/user/user5.jpg"
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper";
+import { EffectCoverflow,Pagination } from "swiper";
 
 const Testimonial = () => {
     const testimonials = [
@@ -49,20 +49,21 @@ const Testimonial = () => {
       ]
   return (
     <div className="w-full mt-10 bg-primary py-10 pt-0" id="testimonial">
-      <h1 className="text-4xl font-semibold text-center text-base-100 my-5 pt-5">
-        Clients Testimonials
+      <h1 className="text-4xl font-semibold text-center text-base-100 my-5 mb-10 pt-5">
+        Testimonials
       </h1>
-      <p className="w-full md:w-1/2 lg:w-1/2 mb-10 mx-auto text-center text-base-100 ">
+      {/* <p className="w-full md:w-1/2 lg:w-1/2 mb-10 mx-auto text-center text-base-100 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         blandit massa Nullam id varius nunc id varius nunc.
-      </p>
+      </p> */}
       <div className="w-4/5 mx-auto">
         <Swiper
           spaceBetween={30}
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
+          modules={[EffectCoverflow,Pagination]}
+          
           className="mySwiper"
           breakpoints={{
             // when window width is >= 640px

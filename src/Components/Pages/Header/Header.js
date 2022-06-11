@@ -1,35 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../image/logo.png"
 
 const Header = () => {
   const menu = (
     <>
       <li>
-        <a href="#home" className="text-">Home</a>
+        <a href="/#home" className="text-black md:text-base-100 lg:text-base-100">Home</a>
       </li>
 
       <li>
-        <a href="#about" className="text-">About</a>
+        <a href="#about" className="text-black md:text-base-100 lg:text-base-100">About</a>
       </li>
       <li>
-        <a href="#services" className="text-">Services</a>
+        <a href="#services" className="text-black md:text-base-100 lg:text-base-100">Services</a>
       </li>
       <li>
-        <a href="#projects" className="text-">Projects</a>
+        <a href="#projects" className="text-black md:text-base-100 lg:text-base-100">Projects</a>
+      </li>
+    
+      <li>
+        <a href="#testimonial" className="text-black md:text-base-100 lg:text-base-100">Testimonial</a>
       </li>
       <li>
-        <a className="text-">Resume</a>
+        <a href="#contact" className="text-black md:text-base-100 lg:text-base-100">Contact</a>
       </li>
       <li>
-        <a href="#testimonial" className="text-">Testimonial</a>
-      </li>
-      <li>
-        <a className="text-">Contact</a>
+        <a href="#blogs" className="text-black md:text-base-100 lg:text-base-100">Blogs</a>
       </li>
     </>
   );
   return (
-    <div className="bg-primary text-base-100">
+    <div className="bg-primary text-base-100 fixed left-0 right-0 z-50 top-0">
       <div class="navbar  w-full md:w-4/5 mx-auto lg:w-4/5 mx-auto">
         <div class="navbar-start ">
           <div class="dropdown">
@@ -51,7 +53,7 @@ const Header = () => {
             </label>
             <ul
               tabindex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {menu}
             </ul>

@@ -2,10 +2,12 @@ import React from "react";
 import myimage from "../../../image/my-image.png";
 import Typed from "react-typed"
 
+
 const Banner = () => {
   return (
     <section className="bg-primary " id="home">
-      <div class="hero min-h-screen md:w-4/5 lg:w-4/5 w-full mx-auto">
+     
+      <div class="hero min-h-screen md:w-4/5 lg:w-4/5 w-full mx-auto mt-20 md:mt-10 lg:mt-10">
         <div class="hero-content flex-col flex-row-reverse md:flex-row  lg:flex-row">
           <div className="flex-1 flex justify-center md:justify-start items-center">
             <div>
@@ -30,9 +32,7 @@ const Banner = () => {
                 </span>
               </p>
               <p class="py-6 text-base-100 text-center md:text-left">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+              Full-Stack Web Developer with knowledge of HTML5,CSS3,JavaScript ReactJs NextJs, Redux, Typescript, ExpressJs, NodeJs, MongoDB. Also has experience with developing backend APIs using JavaScript web frameworks.
               </p>
               <div className="flex justify-center md:justify-start">
                 <button class="btn btn-secondary rounded-full px-8">

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../image/logo.png"
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../../../firebase.init";
 
 const Header = () => {
   const menu = (
@@ -25,6 +27,10 @@ const Header = () => {
       <li>
         <a href="#contact" className="text-black md:text-base-100 lg:text-base-100">Contact</a>
       </li>
+      <li>
+        <a href="#blogs" className="text-black md:text-base-100 lg:text-base-100">Blogs</a>
+      </li>
+
       <li>
         <a href="#blogs" className="text-black md:text-base-100 lg:text-base-100">Blogs</a>
       </li>

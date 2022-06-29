@@ -20,6 +20,7 @@ const Contact = () => {
       .then(
         (result) => {
           toast.success("Message sent succesfully!")
+          e.target.reset()
         },
         (error) => {
           console.log(error.text);

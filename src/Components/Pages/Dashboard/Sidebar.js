@@ -66,6 +66,30 @@ const Sidebar = () => {
             </li>
           </div>
         </div>
+        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" class="peer" />
+          <div class="collapse-title  font-bold">Projects</div>
+          <div class="collapse-content  bg-base-300 text-black ">
+            <li className="mt-3">
+              <NavLink to="/admin/projects">All Projects</NavLink>
+            </li>
+            <li className="mt-3">
+              <NavLink to="/admin/addproject">Add New Project</NavLink>
+            </li>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" class="peer" />
+          <div class="collapse-title  font-bold">Testimonial</div>
+          <div class="collapse-content  bg-base-300 text-black ">
+            <li className="mt-3">
+              <NavLink to="/admin/testimonial">All Testimonial</NavLink>
+            </li>
+            <li className="mt-3">
+              <NavLink to="/admin/addtestimonial">Add New Testimonial</NavLink>
+            </li>
+          </div>
+        </div>
       </ul>
 
       </div>

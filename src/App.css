@@ -16,3 +16,28 @@ html {
       width: 768px;
     }
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px !important;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #252740;
+    border-radius: 10px;
+  }
+  
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+
+
+  

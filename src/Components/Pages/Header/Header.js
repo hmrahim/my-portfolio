@@ -31,9 +31,6 @@ const Header = () => {
         <a href="#blogs" className="text-black md:text-base-100 lg:text-base-100">Blogs</a>
       </li>
 
-      <li>
-        <a href="#blogs" className="text-black md:text-base-100 lg:text-base-100">Blogs</a>
-      </li>
     </>
   );
   return (

@@ -91,7 +91,7 @@ const UpdateImages = () => {
               </div>
               <div class="form-control w-full ">
                 <label class="label">
-                  <span class="label-text">Skill image url</span>
+                  <span class="label-text">About image url</span>
                 </label>
                 <input
                 defaultValue={data?.slice(0)[0].about}

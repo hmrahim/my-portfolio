@@ -28,6 +28,12 @@ import ContactSetting from "./Components/Pages/Dashboard/Setting/ContactSetting"
 import TitleFlag from "./Components/Pages/Dashboard/Setting/TitleFlag";
 import AddFlag from "./Components/Pages/Dashboard/Setting/AddFlag";
 import UpdateSkillFlag from "./Components/Pages/Dashboard/Setting/UpdateSkillFlag";
+import Projects from "./Components/Pages/Dashboard/Projects";
+import AddProject from "./Components/Pages/Dashboard/AddProject";
+import UpdateProject from "./Components/Pages/Dashboard/UpdateProject";
+import AllTestimonial from "./Components/Pages/Dashboard/AllTestimonial";
+import AddTestimonial from "./Components/Pages/Dashboard/AddTestimonial";
+import UpdateTestimonial from "./Components/Pages/Dashboard/UpdateTestimonial";
 
 function App() {
   return (
@@ -55,6 +61,12 @@ function App() {
             <Route path="addservice" element={<AddService/>} />
             <Route path="allservice" element={<AllServices/>} />
             <Route path="updateservice/:id" element={<UpdateService/>} />
+            <Route path="projects" element={<Projects/>} />
+            <Route path="addproject" element={<AddProject/>} />
+            <Route path="updateproject/:id" element={<UpdateProject/>} />
+            <Route path="testimonial" element={<AllTestimonial/>} />
+            <Route path="addtestimonial" element={<AddTestimonial/>} />
+            <Route path="updatetestimonial/:id" element={<UpdateTestimonial/>} />
 
           </Route>
         </Route>

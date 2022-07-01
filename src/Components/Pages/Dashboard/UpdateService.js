@@ -46,15 +46,15 @@ refetch()
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Title</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Title</span>
                 </label>
                 <input
                defaultValue={data.title}
                   type="text"
                   placeholder="Title"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("title",{
                       required:{
                           value:true,
@@ -62,19 +62,19 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.title?.type === "required" && <span class="label-text-alt text-red-500">{errors.title.message}</span>}
+                <label className="label">
+                  {errors?.title?.type === "required" && <span className="label-text-alt text-red-500">{errors.title.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Description</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Description</span>
                 </label>
                 <textarea 
                 defaultValue={data.desc}
-                class="textarea textarea-bordered"
+                className="textarea textarea-bordered"
                  placeholder="Description"
                  {...register("desc",{
                     required:{
@@ -84,21 +84,21 @@ refetch()
                 })}
                  ></textarea>
               
-                <label class="label">
-                {errors?.desc?.type === "required" && <span class="label-text-alt text-red-500">{errors.desc.message}</span>}
+                <label className="label">
+                {errors?.desc?.type === "required" && <span className="label-text-alt text-red-500">{errors.desc.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Icon</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Icon</span>
                 </label>
                 <input
                defaultValue={data.icon}
                   type="url"
                   placeholder="Icon Url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("icon",{
                       required:{
                           value:true,
@@ -106,14 +106,14 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                {errors?.icon?.type === "required" && <span class="label-text-alt text-red-500">{errors.icon.message}</span>}
+                <label className="label">
+                {errors?.icon?.type === "required" && <span className="label-text-alt text-red-500">{errors.icon.message}</span>}
                   
               
                 </label>
               </div>
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Submit</button>
               </div>
             </form>

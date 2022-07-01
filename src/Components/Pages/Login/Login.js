@@ -29,14 +29,14 @@ const Login = () => {
       <div className="w-full mx-6 md:mx-0 md:w-4/12 mx-auto bg-base-300 p-6 rounded-lg shadow-xl">
         <h1 className="text-2xl text-center  font-semibold mb-2">Login</h1> <hr />
         <form action="" onSubmit={handleSubmit(onSubmit)}>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Email</span>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Email</span>
             </label>
             <input
               type="email"
               placeholder="email"
-              class="input input-bordered"
+              className="input input-bordered"
               {...register("email",{
                 required:{
                     value:true,
@@ -49,18 +49,18 @@ const Login = () => {
               })}
               
             />
-            {errors?.email?.type === "required" &&  <span class="label-text-alt mt-1 text-red-500">{errors.email.message}</span>}
-            {errors?.email?.type === "pattern" &&  <span class="label-text-alt mt-1 text-red-500">{errors.email.message}</span>}
+            {errors?.email?.type === "required" &&  <span className="label-text-alt mt-1 text-red-500">{errors.email.message}</span>}
+            {errors?.email?.type === "pattern" &&  <span className="label-text-alt mt-1 text-red-500">{errors.email.message}</span>}
            
           </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Password</span>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
             </label>
             <input
               type="password"
               placeholder="password"
-              class="input input-bordered"
+              className="input input-bordered"
               {...register("password",{
                 required:{
                     value:true,
@@ -72,19 +72,19 @@ const Login = () => {
               }
               })}
             />
-              {errors?.password?.type === "required" &&  <span class="label-text-alt mt-1 text-red-500">{errors.password.message}</span>}
+              {errors?.password?.type === "required" &&  <span className="label-text-alt mt-1 text-red-500">{errors.password.message}</span>}
            
-              {errors?.password?.type === "minLength" &&  <span class="label-text-alt mt-1 text-red-500">{errors.password.message}</span>}
+              {errors?.password?.type === "minLength" &&  <span className="label-text-alt mt-1 text-red-500">{errors.password.message}</span>}
            
-            <label class="label">
-              <a href="#" class="label-text-alt link link-hover">
+            <label className="label">
+              <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
               </a>
             </label>
           </div>
-          <div class="form-control mt-6">
+          <div className="form-control mt-6">
             {
-                loading ?  <button class="btn btn-primary loading">Login</button> : <button class="btn btn-primary">Login</button>
+                loading ?  <button className="btn btn-primary loading">Login</button> : <button className="btn btn-primary">Login</button>
             }
             
            

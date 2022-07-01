@@ -15,8 +15,8 @@ console.log(data)
           Add New Skills
         </h1>{" "}
         <hr />
-        <div class="overflow-x-auto mt-5">
-          <table class="table w-full">
+        <div className="overflow-x-auto mt-5">
+          <table className="table w-full">
             {/* <!-- head --> */}
             {
               data ? 

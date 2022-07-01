@@ -22,7 +22,7 @@ $(function () {
 
     var getMessageWithClearButton = function (msg) {
         msg = msg ? msg : 'Click button to close';
-        msg += '<br /><br /><button type="button" class="btn btn-danger clear">Close</button>';
+        msg += '<br /><br /><button type="button" className="btn btn-danger clear">Close</button>';
         return msg;
     };
 

@@ -27,11 +27,11 @@ const Banner = () => {
   return (
     <section className="bg-primary " id="home">
      
-      <div class="hero min-h-screen md:w-4/5 lg:w-4/5 w-full mx-auto mt-20 md:mt-10 lg:mt-10">
-        <div class="hero-content flex-col flex-row-reverse md:flex-row  lg:flex-row">
+      <div className="hero min-h-screen md:w-4/5 lg:w-4/5 w-full mx-auto mt-20 md:mt-10 lg:mt-10">
+        <div className="hero-content flex-col flex-row-reverse md:flex-row  lg:flex-row">
           <div className="flex-1 flex justify-center md:justify-start items-center">
             <div>
-              <h1 class="text-5xl font-bold text-base-100 text-center md:text-left">
+              <h1 className="text-5xl font-bold text-base-100 text-center md:text-left">
                 I'm <span className="capitalize"> {data?.name}</span>
               </h1>
               <p className="text-base-100 mt-2 text-2xl text-center md:text-left">
@@ -45,18 +45,18 @@ const Banner = () => {
         />
                 </span>
               </p>
-              <p class="py-6 text-base-100 text-center md:text-left">
+              <p className="py-6 text-base-100 text-center md:text-left">
               {data.about}
               </p>
               <div className="flex justify-center md:justify-start">
-                <button class="btn btn-secondary rounded-full px-8">
+                <a href="#contact" className="btn btn-secondary rounded-full px-8">
                   {data.button}
-                </button>
+                </a>
               </div>
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <img src={data.image} class="z-0" />
+            <img src={data.image} className="z-0" />
           </div>
         </div>
       </div>

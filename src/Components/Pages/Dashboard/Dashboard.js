@@ -11,17 +11,17 @@ const Dashboard = () => {
   };
   return (
     <div className=" ">
-      <div class="navbar bg-primary ">
+      <div className="navbar bg-primary ">
         <div className="w-full md:w-11/12 mx-auto">
-          <div class="flex-1  flex items-center">
+          <div className="flex-1  flex items-center">
             <label
               for="my-drawer-2"
               tabindex="0"
-              class="btn btn-primary btn-circle  flex md:hidden"
+              className="btn btn-primary btn-circle  flex md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -37,7 +37,7 @@ const Dashboard = () => {
             <img src={logo} width={60} height={50} alt="" />
           </div>
           <div>
-          <button onClick={logout} class="btn  btn-ghost px-4 text-white">
+          <button onClick={logout} className="btn  btn-ghost px-4 text-white">
             {" "}
             Logout
           </button>
@@ -46,9 +46,9 @@ const Dashboard = () => {
       
       </div>
 
-      <div class="drawer drawer-mobile bg-base-300">
-        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col">
+      <div className="drawer drawer-mobile bg-base-300">
+        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col">
           {/* <!-- Page content here --> */}
           <Outlet/>
         </div>

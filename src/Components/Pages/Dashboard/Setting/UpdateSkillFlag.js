@@ -54,15 +54,15 @@ refetch()
          
         </div>
            <form onSubmit={handleSubmit(onsubmit)} action="">
-           <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Name</span>
+           <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Name</span>
                 </label>
                 <input
               defaultValue={data.name}
                   type="text"
                   placeholder="Name"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("name",{
                       required:{
                           value:true,
@@ -70,8 +70,8 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.name?.type === "required" && <span class="label-text-alt text-red-500">{errors.name.message}</span>}
+                <label className="label">
+                  {errors?.name?.type === "required" && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
                   
               
                 </label>

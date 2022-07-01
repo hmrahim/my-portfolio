@@ -12,8 +12,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { EffectCoverflow,Pagination } from "swiper";
+import { useQuery } from "react-query";
+import Spiner from "../Dashboard/Spiner";
 
 const Testimonial = () => {
+  const {data,refetch,isLoading} = useQuery("testimonial",()=> fetch("http://localhost:5000/testimonial").then(res=>res.json()))
     const testimonials = [
         {
             name:"HM RAHIM",
@@ -47,6 +50,9 @@ const Testimonial = () => {
         },
       
       ]
+      if(isLoading){
+        return <Spiner/>
+      }
   return (
     <div className="w-full mt-10 bg-primary py-10 pt-0" id="testimonial">
       <h1 className="text-4xl font-semibold text-center text-base-100 my-5 mb-10 pt-5">
@@ -57,6 +63,9 @@ const Testimonial = () => {
         blandit massa Nullam id varius nunc id varius nunc.
       </p> */}
       <div className="w-4/5 mx-auto">
+        {
+          data.length !== 0 ? 
+      
         <Swiper
           spaceBetween={30}
           pagination={{
@@ -79,21 +88,21 @@ const Testimonial = () => {
           }}
         >
 {
-    testimonials.map(testi=>       
+    data.map(testi=>       
     <SwiperSlide>
-        <div class="card bg-base-100 shadow-xl ">
-          <figure class="px-10 pt-10">
-            <div class="avatar">
-              <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={testi.img} />
+        <div className="card bg-base-100 shadow-xl ">
+          <figure className="px-10 pt-10">
+            <div className="avatar">
+              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src={testi.image} />
               </div>
             </div>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-2xl font-semibold">{testi.name}</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="card-title text-2xl font-semibold">{testi.name}</h2>
             <p className="text-secondary">{testi.desig}</p>
             <p>
-           {testi.desc}
+           {testi.testimonial}
             </p>
           </div>
         </div>
@@ -101,7 +110,9 @@ const Testimonial = () => {
 }
     
      
-        </Swiper>
+        </Swiper> : 
+        <h2 className="text-base-100 text-2xl text-center">No Testimonial</h2>
+          }
       </div>
     </div>
   );

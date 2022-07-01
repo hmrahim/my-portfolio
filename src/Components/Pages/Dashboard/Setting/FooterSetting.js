@@ -49,15 +49,15 @@ refetch()
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Copy Right Text</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Copy Right Text</span>
                 </label>
                 <input
                defaultValue={data.copy}
                   type="text"
                   placeholder="Copy Right Text"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("copy",{
                       required:{
                           value:true,
@@ -65,8 +65,8 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.copy?.type === "required" && <span class="label-text-alt text-red-500">{errors.copy.message}</span>}
+                <label className="label">
+                  {errors?.copy?.type === "required" && <span className="label-text-alt text-red-500">{errors.copy.message}</span>}
                   
               
                 </label>
@@ -74,15 +74,15 @@ refetch()
               <div>
                 <h4 className='mt-5'><strong>Social links : </strong> </h4>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Facebook</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Facebook</span>
                 </label>
                 <input
               defaultValue={data.facebook}
                   type="url"
                   placeholder="Facebook"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("facebook",{
                       required:{
                           value:true,
@@ -90,21 +90,21 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.facebook?.type === "required" && <span class="label-text-alt text-red-500">{errors.facebook.message}</span>}
+                <label className="label">
+                  {errors?.facebook?.type === "required" && <span className="label-text-alt text-red-500">{errors.facebook.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Instagram</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Instagram</span>
                 </label>
                 <input
                defaultValue={data.instagram}
                   type="url"
                   placeholder="Instagram"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("instagram",{
                       required:{
                           value:true,
@@ -112,21 +112,21 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.instagram?.type === "required" && <span class="label-text-alt text-red-500">{errors.instagram.message}</span>}
+                <label className="label">
+                  {errors?.instagram?.type === "required" && <span className="label-text-alt text-red-500">{errors.instagram.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Linkedin</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Linkedin</span>
                 </label>
                 <input
            defaultValue={data.linkedin}
                   type="url"
                   placeholder="Linkedin"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("linkedin",{
                       required:{
                           value:true,
@@ -134,8 +134,8 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.likedin?.type === "required" && <span class="label-text-alt text-red-500">{errors.likedin.message}</span>}
+                <label className="label">
+                  {errors?.likedin?.type === "required" && <span className="label-text-alt text-red-500">{errors.likedin.message}</span>}
                   
               
                 </label>
@@ -143,7 +143,7 @@ refetch()
               
          
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Update</button>
               </div>
             </form>

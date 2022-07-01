@@ -45,15 +45,15 @@ const UpdateImages = () => {
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Logo url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Logo url</span>
                 </label>
                 <input
                defaultValue={data?.slice(0)[0].logo}
                   type="url"
                   placeholder="url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("logo",{
                       required:{
                           value:true,
@@ -61,21 +61,21 @@ const UpdateImages = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.logo?.type === "required" && <span class="label-text-alt text-red-500">{errors.logo.message}</span>}
+                <label className="label">
+                  {errors?.logo?.type === "required" && <span className="label-text-alt text-red-500">{errors.logo.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Banner image url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Banner image url</span>
                 </label>
                 <input
                 defaultValue={data?.slice(0)[0].banner}
                   type="url"
                   placeholder="Url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("banner",{
                       required:{
                           value:true,
@@ -83,21 +83,21 @@ const UpdateImages = () => {
                       }
                   })}
                 />
-                <label class="label">
-                {errors?.banner?.type === "required" && <span class="label-text-alt text-red-500">{errors.banner.message}</span>}
+                <label className="label">
+                {errors?.banner?.type === "required" && <span className="label-text-alt text-red-500">{errors.banner.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">About image url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">About image url</span>
                 </label>
                 <input
                 defaultValue={data?.slice(0)[0].about}
                   type="url"
                   placeholder="Url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("about",{
                       required:{
                           value:true,
@@ -105,14 +105,14 @@ const UpdateImages = () => {
                       }
                   })}
                 />
-                <label class="label">
-                {errors?.about?.type === "required" && <span class="label-text-alt text-red-500">{errors.about.message}</span>}
+                <label className="label">
+                {errors?.about?.type === "required" && <span className="label-text-alt text-red-500">{errors.about.message}</span>}
                   
               
                 </label>
               </div>
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Update</button>
               </div>
             </form>

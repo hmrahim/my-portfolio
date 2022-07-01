@@ -3,16 +3,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const SingleTestimonial = () => {
     return (
         <SwiperSlide>
-        <div class="card bg-base-100 shadow-xl ">
-          <figure class="px-10 pt-10">
-            <div class="avatar">
-              <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="card bg-base-100 shadow-xl ">
+          <figure className="px-10 pt-10">
+            <div className="avatar">
+              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src="https://api.lorem.space/image/face?hash=3174" />
               </div>
             </div>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title text-2xl font-semibold">HM RAHIM</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="card-title text-2xl font-semibold">HM RAHIM</h2>
             <p className="text-secondary">Front-end Developer</p>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.

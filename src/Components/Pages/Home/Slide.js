@@ -32,7 +32,7 @@ const Slide = () => {
      
       >
         <SwiperSlide>
-          <div class="card w-[400px]  glass">
+          <div className="card w-[400px]  glass">
             <figure className="w-full">
               <img
               className="w-full"
@@ -40,17 +40,17 @@ const Slide = () => {
                 alt="car!"
               />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
+            <div className="card-body">
+              <h2 className="card-title">Life hack</h2>
               <p>How to park your car at your garage?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Learn now!</button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="card w-[400px]  glass">
+          <div className="card w-[400px]  glass">
             <figure className="w-full">
               <img
               className="w-full"
@@ -58,17 +58,17 @@ const Slide = () => {
                 alt="car!"
               />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
+            <div className="card-body">
+              <h2 className="card-title">Life hack</h2>
               <p>How to park your car at your garage?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Learn now!</button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="card w-[400px]  glass">
+          <div className="card w-[400px]  glass">
             <figure className="w-full">
               <img
               className="w-full"
@@ -76,11 +76,11 @@ const Slide = () => {
                 alt="car!"
               />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
+            <div className="card-body">
+              <h2 className="card-title">Life hack</h2>
               <p>How to park your car at your garage?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Learn now!</button>
               </div>
             </div>
           </div>

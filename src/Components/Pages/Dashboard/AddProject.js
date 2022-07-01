@@ -45,15 +45,15 @@ const AddProject = () => {
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Screenshoot url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Screenshoot url</span>
                 </label>
                 <input
            
                   type="url"
                   placeholder="Screenshoot"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("ssu",{
                       required:{
                           value:true,
@@ -61,21 +61,21 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.ssu?.type === "required" && <span class="label-text-alt text-red-500">{errors.ssu.message}</span>}
+                <label className="label">
+                  {errors?.ssu?.type === "required" && <span className="label-text-alt text-red-500">{errors.ssu.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Name</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Name</span>
                 </label>
                 <input
               
                   type="text"
                   placeholder="Name"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("name",{
                       required:{
                           value:true,
@@ -83,21 +83,21 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.name?.type === "required" && <span class="label-text-alt text-red-500">{errors.name.message}</span>}
+                <label className="label">
+                  {errors?.name?.type === "required" && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Technology</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Technology</span>
                 </label>
                 <input
             
                   type="text"
                   placeholder="Technology"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("tech",{
                       required:{
                           value:true,
@@ -105,21 +105,21 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.tech?.type === "required" && <span class="label-text-alt text-red-500">{errors.tech.message}</span>}
+                <label className="label">
+                  {errors?.tech?.type === "required" && <span className="label-text-alt text-red-500">{errors.tech.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Client Site url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Client Site url</span>
                 </label>
                 <input
               
                   type="url"
                   placeholder="Client Site url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("client",{
                       required:{
                           value:true,
@@ -127,21 +127,21 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.client?.type === "required" && <span class="label-text-alt text-red-500">{errors.client.message}</span>}
+                <label className="label">
+                  {errors?.client?.type === "required" && <span className="label-text-alt text-red-500">{errors.client.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Server Site url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Server Site url</span>
                 </label>
                 <input
                
                   type="url"
                   placeholder="Server Site url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("server",{
                       required:{
                           value:true,
@@ -149,21 +149,21 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.server?.type === "required" && <span class="label-text-alt text-red-500">{errors.server.message}</span>}
+                <label className="label">
+                  {errors?.server?.type === "required" && <span className="label-text-alt text-red-500">{errors.server.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Live WebSite url</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Live WebSite url</span>
                 </label>
                 <input
               
                   type="url"
                   placeholder="Live WebSite url"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("live",{
                       required:{
                           value:true,
@@ -171,8 +171,8 @@ const AddProject = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.live?.type === "required" && <span class="label-text-alt text-red-500">{errors.live.message}</span>}
+                <label className="label">
+                  {errors?.live?.type === "required" && <span className="label-text-alt text-red-500">{errors.live.message}</span>}
                   
               
                 </label>
@@ -180,7 +180,7 @@ const AddProject = () => {
               
          
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Submit</button>
               </div>
             </form>

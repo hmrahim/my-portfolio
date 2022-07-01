@@ -11,13 +11,13 @@ const Skill = () => {
     refetch()
     return (
         <>{
-            data.map((skill,index)=>    <div class="form-control w-full max-w-xs my-3">
-            <label class="label">
-              <span class="label-text font-bold">{skill.title}</span>
-              <span class="label-text-alt font-bold">{skill.label}%</span>
+            data.map((skill,index)=>    <div className="form-control w-full max-w-xs my-3">
+            <label className="label">
+              <span className="label-text font-bold">{skill.title}</span>
+              <span className="label-text-alt font-bold">{skill.label}%</span>
             </label>
             <progress
-              class="progress progress-secondary w-full"
+              className="progress progress-secondary w-full"
               value={skill.label}
               max="100"
               ></progress>

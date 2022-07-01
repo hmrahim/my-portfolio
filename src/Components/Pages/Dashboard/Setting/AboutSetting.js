@@ -49,15 +49,15 @@ refetch()
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Name</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Name</span>
                 </label>
                 <input
                defaultValue={data.title}
                   type="text"
                   placeholder="Title"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("title",{
                       required:{
                           value:true,
@@ -65,21 +65,21 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.title?.type === "required" && <span class="label-text-alt text-red-500">{errors.title.message}</span>}
+                <label className="label">
+                  {errors?.title?.type === "required" && <span className="label-text-alt text-red-500">{errors.title.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Image</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Image</span>
                 </label>
                 <input
                defaultValue={data.image}
                   type="text"
                   placeholder="Image"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("image",{
                       required:{
                           value:true,
@@ -87,19 +87,19 @@ refetch()
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.image?.type === "required" && <span class="label-text-alt text-red-500">{errors.image.message}</span>}
+                <label className="label">
+                  {errors?.image?.type === "required" && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">About</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">About</span>
                 </label>
                 <textarea 
                defaultValue={data.about}
-                class="textarea textarea-bordered"
+                className="textarea textarea-bordered"
                  placeholder="Description"
                  {...register("about",{
                     required:{
@@ -109,15 +109,15 @@ refetch()
                 })}
                  ></textarea>
               
-                <label class="label">
-                {errors?.about?.type === "required" && <span class="label-text-alt text-red-500">{errors.about.message}</span>}
+                <label className="label">
+                {errors?.about?.type === "required" && <span className="label-text-alt text-red-500">{errors.about.message}</span>}
                   
               
                 </label>
               </div>
          
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Update</button>
               </div>
             </form>

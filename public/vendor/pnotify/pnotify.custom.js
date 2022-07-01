@@ -1161,7 +1161,7 @@ return init(root);
         prompt: null,
 
         init: function(notice, options){
-            this.container = $('<div class="ui-pnotify-action-bar" style="margin-top:5px;clear:both;" />').css('text-align', options.align).appendTo(notice.container);
+            this.container = $('<div className="ui-pnotify-action-bar" style="margin-top:5px;clear:both;" />').css('text-align', options.align).appendTo(notice.container);
 
             if (options.confirm || options.prompt)
                 this.makeDialog(notice, options);
@@ -1202,7 +1202,7 @@ return init(root);
                     this.container.append(' ');
                 else
                     already = true;
-                elem = $('<button type="button" class="ui-pnotify-action-button" />')
+                elem = $('<button type="button" className="ui-pnotify-action-button" />')
                 .addClass((typeof notice.styles.btn === "undefined" ? "" : notice.styles.btn)+" "+(typeof btn.addClass === "undefined" ? "" : btn.addClass))
                 .text(btn.text)
                 .appendTo(this.container)
@@ -1217,7 +1217,7 @@ return init(root);
                             elem.click();
                     }})(elem));
                 if (notice.styles.text) {
-                    elem.wrapInner('<span class="'+notice.styles.text+'"></span>');
+                    elem.wrapInner('<span className="'+notice.styles.text+'"></span>');
                 }
                 if (notice.styles.btnhover) {
                     elem.hover((function(elem){ return function(){

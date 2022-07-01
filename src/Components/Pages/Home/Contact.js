@@ -95,28 +95,28 @@ const Contact = () => {
                 name="name"
                 type="text"
                 placeholder="Enter Name"
-                class="input input-bordered w-full rounded-full"
+                className="input input-bordered w-full rounded-full"
               />
               <input
               required
                 name="email"
                 type="text"
                 placeholder="Enter Email"
-                class="input input-bordered w-full rounded-full"
+                className="input input-bordered w-full rounded-full"
               />
               <input
               required
                 name="phone"
                 type="text"
                 placeholder="Enter Phone No"
-                class="input input-bordered w-full rounded-full"
+                className="input input-bordered w-full rounded-full"
               />
               <input
               required
                 name="subject"
                 type="text"
                 placeholder="Enter Subject"
-                class="input input-bordered w-full rounded-full"
+                className="input input-bordered w-full rounded-full"
               />
             </div>
 
@@ -124,7 +124,7 @@ const Contact = () => {
             <textarea
             required
               name="message"
-              class="textarea textarea-bordered w-full rounded-xl"
+              className="textarea textarea-bordered w-full rounded-xl"
               placeholder="Message"
             ></textarea>
             <div>

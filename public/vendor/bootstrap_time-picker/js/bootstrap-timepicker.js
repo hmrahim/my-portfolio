@@ -274,76 +274,76 @@
         templateContent;
 
       if (this.showInputs) {
-        hourTemplate = '<input type="text" class="bootstrap-timepicker-hour" maxlength="2"/>';
-        minuteTemplate = '<input type="text" class="bootstrap-timepicker-minute" maxlength="2"/>';
-        secondTemplate = '<input type="text" class="bootstrap-timepicker-second" maxlength="2"/>';
-        meridianTemplate = '<input type="text" class="bootstrap-timepicker-meridian" maxlength="2"/>';
+        hourTemplate = '<input type="text" className="bootstrap-timepicker-hour" maxlength="2"/>';
+        minuteTemplate = '<input type="text" className="bootstrap-timepicker-minute" maxlength="2"/>';
+        secondTemplate = '<input type="text" className="bootstrap-timepicker-second" maxlength="2"/>';
+        meridianTemplate = '<input type="text" className="bootstrap-timepicker-meridian" maxlength="2"/>';
       } else {
-        hourTemplate = '<span class="bootstrap-timepicker-hour"></span>';
-        minuteTemplate = '<span class="bootstrap-timepicker-minute"></span>';
-        secondTemplate = '<span class="bootstrap-timepicker-second"></span>';
-        meridianTemplate = '<span class="bootstrap-timepicker-meridian"></span>';
+        hourTemplate = '<span className="bootstrap-timepicker-hour"></span>';
+        minuteTemplate = '<span className="bootstrap-timepicker-minute"></span>';
+        secondTemplate = '<span className="bootstrap-timepicker-second"></span>';
+        meridianTemplate = '<span className="bootstrap-timepicker-meridian"></span>';
       }
 
       templateContent = '<table>'+
          '<tr>'+
-           '<td><a href="#" data-action="incrementHour"><span class="'+ this.icons.up +'"></span></a></td>'+
-           '<td class="separator">&nbsp;</td>'+
-           '<td><a href="#" data-action="incrementMinute"><span class="'+ this.icons.up +'"></span></a></td>'+
+           '<td><a href="#" data-action="incrementHour"><span className="'+ this.icons.up +'"></span></a></td>'+
+           '<td className="separator">&nbsp;</td>'+
+           '<td><a href="#" data-action="incrementMinute"><span className="'+ this.icons.up +'"></span></a></td>'+
            (this.showSeconds ?
-             '<td class="separator">&nbsp;</td>'+
-             '<td><a href="#" data-action="incrementSecond"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td className="separator">&nbsp;</td>'+
+             '<td><a href="#" data-action="incrementSecond"><span className="'+ this.icons.up +'"></span></a></td>'
            : '') +
            (this.showMeridian ?
-             '<td class="separator">&nbsp;</td>'+
-             '<td class="meridian-column"><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td className="separator">&nbsp;</td>'+
+             '<td className="meridian-column"><a href="#" data-action="toggleMeridian"><span className="'+ this.icons.up +'"></span></a></td>'
            : '') +
          '</tr>'+
          '<tr>'+
            '<td>'+ hourTemplate +'</td> '+
-           '<td class="separator">:</td>'+
+           '<td className="separator">:</td>'+
            '<td>'+ minuteTemplate +'</td> '+
            (this.showSeconds ?
-            '<td class="separator">:</td>'+
+            '<td className="separator">:</td>'+
             '<td>'+ secondTemplate +'</td>'
            : '') +
            (this.showMeridian ?
-            '<td class="separator">&nbsp;</td>'+
+            '<td className="separator">&nbsp;</td>'+
             '<td>'+ meridianTemplate +'</td>'
            : '') +
          '</tr>'+
          '<tr>'+
-           '<td><a href="#" data-action="decrementHour"><span class="'+ this.icons.down +'"></span></a></td>'+
-           '<td class="separator"></td>'+
-           '<td><a href="#" data-action="decrementMinute"><span class="'+ this.icons.down +'"></span></a></td>'+
+           '<td><a href="#" data-action="decrementHour"><span className="'+ this.icons.down +'"></span></a></td>'+
+           '<td className="separator"></td>'+
+           '<td><a href="#" data-action="decrementMinute"><span className="'+ this.icons.down +'"></span></a></td>'+
            (this.showSeconds ?
-            '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="decrementSecond"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td className="separator">&nbsp;</td>'+
+            '<td><a href="#" data-action="decrementSecond"><span className="'+ this.icons.down +'"></span></a></td>'
            : '') +
            (this.showMeridian ?
-            '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td className="separator">&nbsp;</td>'+
+            '<td><a href="#" data-action="toggleMeridian"><span className="'+ this.icons.down +'"></span></a></td>'
            : '') +
          '</tr>'+
        '</table>';
 
       switch(this.template) {
       case 'modal':
-        template = '<div class="bootstrap-timepicker-widget modal hide fade in" data-backdrop="'+ (this.modalBackdrop ? 'true' : 'false') +'">'+
-          '<div class="modal-header">'+
-            '<a href="#" class="close" data-dismiss="modal">&times;</a>'+
+        template = '<div className="bootstrap-timepicker-widget modal hide fade in" data-backdrop="'+ (this.modalBackdrop ? 'true' : 'false') +'">'+
+          '<div className="modal-header">'+
+            '<a href="#" className="close" data-dismiss="modal">&times;</a>'+
             '<h3>Pick a Time</h3>'+
           '</div>'+
-          '<div class="modal-content">'+
+          '<div className="modal-content">'+
             templateContent +
           '</div>'+
-          '<div class="modal-footer">'+
-            '<a href="#" class="btn btn-primary" data-dismiss="modal">OK</a>'+
+          '<div className="modal-footer">'+
+            '<a href="#" className="btn btn-primary" data-dismiss="modal">OK</a>'+
           '</div>'+
         '</div>';
         break;
       case 'dropdown':
-        template = '<div class="bootstrap-timepicker-widget dropdown-menu">'+ templateContent +'</div>';
+        template = '<div className="bootstrap-timepicker-widget dropdown-menu">'+ templateContent +'</div>';
         break;
       }
 

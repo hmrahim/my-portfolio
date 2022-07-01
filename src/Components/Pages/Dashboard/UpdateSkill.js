@@ -37,15 +37,15 @@ const UpdateSkill = () => {
           </h1> <hr />
           <div className="w-full md:w-5/6 mx-auto">
             <form onSubmit={handleSubmit(onsubmit)} action="">
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Title</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Title</span>
                 </label>
                 <input
                 defaultValue={data.title}
                   type="text"
                   placeholder="Type here"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("title",{
                       required:{
                           value:true,
@@ -53,21 +53,21 @@ const UpdateSkill = () => {
                       }
                   })}
                 />
-                <label class="label">
-                  {errors?.title?.type === "required" && <span class="label-text-alt text-red-500">{errors.title.message}</span>}
+                <label className="label">
+                  {errors?.title?.type === "required" && <span className="label-text-alt text-red-500">{errors.title.message}</span>}
                   
               
                 </label>
               </div>
-              <div class="form-control w-full ">
-                <label class="label">
-                  <span class="label-text">Skill Label</span>
+              <div className="form-control w-full ">
+                <label className="label">
+                  <span className="label-text">Skill Label</span>
                 </label>
                 <input
                 defaultValue={data.label}
                   type="number"
                   placeholder="%"
-                  class="input input-bordered w-full "
+                  className="input input-bordered w-full "
                   {...register("label",{
                       required:{
                           value:true,
@@ -75,14 +75,14 @@ const UpdateSkill = () => {
                       }
                   })}
                 />
-                <label class="label">
-                {errors?.label?.type === "required" && <span class="label-text-alt text-red-500">{errors.label.message}</span>}
+                <label className="label">
+                {errors?.label?.type === "required" && <span className="label-text-alt text-red-500">{errors.label.message}</span>}
                   
               
                 </label>
               </div>
   
-              <div class="form-control w-full inline">
+              <div className="form-control w-full inline">
           <button className="btn btn-primary">Submit</button>
               </div>
             </form>

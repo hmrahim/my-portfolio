@@ -3,15 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div class="drawer-side  overflow-y-auto">
-      <label for="my-drawer-2" class="drawer-overlay"></label>
+    <div className="drawer-side  overflow-y-auto">
+      <label for="my-drawer-2" className="drawer-overlay"></label>
       <div className="overflow-y-auto">
-      <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+      <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
         {/* <!-- Sidebar content here --> */}
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Settings</div>
-          <div class="collapse-content  bg-base-300 text-black ">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold">Settings</div>
+          <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/admin/banner">Banner</NavLink>
             </li>
@@ -30,10 +30,10 @@ const Sidebar = () => {
           
           </div>
         </div>
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Skills</div>
-          <div class="collapse-content  bg-base-300 text-black ">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold">Skills</div>
+          <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/admin/skills">Add New skill</NavLink>
             </li>
@@ -43,10 +43,10 @@ const Sidebar = () => {
           </div>
         </div>
      
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Services</div>
-          <div class="collapse-content  bg-base-300 text-black ">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold">Services</div>
+          <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/admin/allservice">All Services</NavLink>
             </li>
@@ -55,10 +55,10 @@ const Sidebar = () => {
             </li>
           </div>
         </div>
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Projects</div>
-          <div class="collapse-content  bg-base-300 text-black ">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold">Projects</div>
+          <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/admin/projects">All Projects</NavLink>
             </li>
@@ -67,10 +67,10 @@ const Sidebar = () => {
             </li>
           </div>
         </div>
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Testimonial</div>
-          <div class="collapse-content  bg-base-300 text-black ">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold">Testimonial</div>
+          <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/admin/testimonial">All Testimonial</NavLink>
             </li>

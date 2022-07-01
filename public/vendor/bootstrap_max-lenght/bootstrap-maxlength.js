@@ -434,7 +434,7 @@
           maxLengthCurrentInput = getMaxLength(currentInput);
 
           if (!maxLengthIndicator) {
-            maxLengthIndicator = $('<span class="bootstrap-maxlength"></span>').css({
+            maxLengthIndicator = $('<span className="bootstrap-maxlength"></span>').css({
               display: 'none',
               position: 'absolute',
               whiteSpace: 'nowrap',

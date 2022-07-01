@@ -8,6 +8,7 @@ import Spiner from '../Spiner';
 
 
 const ContactSetting = () => {
+  
     
     const {data,refetch,isLoading,error} = useQuery("about",()=> fetch(`http://localhost:5000/contact`).then(res=>res.json() ))
     const id = data?._id

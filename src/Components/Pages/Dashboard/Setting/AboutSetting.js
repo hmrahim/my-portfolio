@@ -73,6 +73,28 @@ refetch()
               </div>
               <div class="form-control w-full ">
                 <label class="label">
+                  <span class="label-text">Image</span>
+                </label>
+                <input
+               defaultValue={data.image}
+                  type="text"
+                  placeholder="Image"
+                  class="input input-bordered w-full "
+                  {...register("image",{
+                      required:{
+                          value:true,
+                          message:"Image field is required"
+                      }
+                  })}
+                />
+                <label class="label">
+                  {errors?.image?.type === "required" && <span class="label-text-alt text-red-500">{errors.image.message}</span>}
+                  
+              
+                </label>
+              </div>
+              <div class="form-control w-full ">
+                <label class="label">
                   <span class="label-text">About</span>
                 </label>
                 <textarea 

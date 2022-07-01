@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Service = ({service}) => {
+const Service = ({service,refetch}) => {
+  refetch()
     return (
         <div class="card bg-base-100 shadow-xl ">
         <figure class="px-10 pt-10">
@@ -11,7 +12,7 @@ const Service = ({service}) => {
           />
         </figure>
         <div class="card-body items-center text-center">
-          <h2 class="card-title">{service.name}</h2>
+          <h2 class="card-title">{service.title}</h2>
           <p>{service.desc}</p>
           
         </div>

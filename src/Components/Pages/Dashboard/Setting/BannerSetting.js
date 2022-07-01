@@ -51,6 +51,28 @@ refetch()
             <form onSubmit={handleSubmit(onsubmit)} action="">
               <div class="form-control w-full ">
                 <label class="label">
+                  <span class="label-text">Logo</span>
+                </label>
+                <input
+               defaultValue={data.logo}
+                  type="text"
+                  placeholder="Logo"
+                  class="input input-bordered w-full "
+                  {...register("logo",{
+                      required:{
+                          value:true,
+                          message:"Logo field is required"
+                      }
+                  })}
+                />
+                <label class="label">
+                  {errors?.logo?.type === "required" && <span class="label-text-alt text-red-500">{errors.logo.message}</span>}
+                  
+              
+                </label>
+              </div>
+              <div class="form-control w-full ">
+                <label class="label">
                   <span class="label-text">Name</span>
                 </label>
                 <input
@@ -67,6 +89,28 @@ refetch()
                 />
                 <label class="label">
                   {errors?.name?.type === "required" && <span class="label-text-alt text-red-500">{errors.name.message}</span>}
+                  
+              
+                </label>
+              </div>
+              <div class="form-control w-full ">
+                <label class="label">
+                  <span class="label-text">Image</span>
+                </label>
+                <input
+               defaultValue={data.image}
+                  type="text"
+                  placeholder="Image"
+                  class="input input-bordered w-full "
+                  {...register("image",{
+                      required:{
+                          value:true,
+                          message:"Image field is required"
+                      }
+                  })}
+                />
+                <label class="label">
+                  {errors?.image?.type === "required" && <span class="label-text-alt text-red-500">{errors.image.message}</span>}
                   
               
                 </label>

@@ -1,40 +1,20 @@
 import React from "react";
+import { useQuery } from "react-query";
 import incon1 from "../../../image/icon/coding.png"
 import incon2 from "../../../image/icon/mern-stack.png"
 import incon3 from "../../../image/icon/responsive-design.png"
 import incon4 from "../../../image/icon/rocket.png"
 import incon5 from "../../../image/icon/web-development.png"
+import Spiner from "../Dashboard/Spiner";
 import Service from "./Service";
 
+
 const Services = () => {
-  const services = [
-    {
-      icon:incon5,
-      name:"Back-end Development",
-      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
-    },
-    {
-      icon:incon4,
-      name:"Front-end Development",
-      desc:"I can develop fast and fully responsive single page React web apps with routing(protected and nested), authentication etc."
-    },
-    {
-      icon:incon3,
-      name:"Web Design",
-      desc:"I can develop pixel perfect fully responsive websites with HTML and CSS from provided figma design."
-    },
-    {
-      icon:incon2,
-      name:"Mern Stack",
-      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
-    },
-    {
-      icon:incon1,
-      name:"Full-Stack Development",
-      desc:"I can develop a full stack web app using MongoDB, Express, React and Node. With authorization features like JWT, admin role, payment system etc."
-    },
-  
-  ]
+  const {data,isLoading,refetch} = useQuery("services",()=> fetch("http://localhost:5000/services").then(res=>res.json()))
+
+  if(isLoading){
+    return <Spiner/>
+  }
   return (
     <section id="services" className="">
       <div className="md:w-4/5 lg:w-4/5 w-full mx-auto mt-20 px-6 md:px-0">
@@ -49,7 +29,7 @@ const Services = () => {
         </p> */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-10">
           {
-            services.map((service,index)=> <Service key={index}  service={service}/>)
+            data.map((service,index)=> <Service key={index} refetch={refetch}  service={service}/>)
           }
          
         </div>

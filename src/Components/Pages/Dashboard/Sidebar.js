@@ -42,18 +42,7 @@ const Sidebar = () => {
             </li>
           </div>
         </div>
-        <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
-          <input type="checkbox" class="peer" />
-          <div class="collapse-title  font-bold">Images</div>
-          <div class="collapse-content  bg-base-300 text-black ">
-            <li className="mt-3">
-              <NavLink to="/admin/images">Images</NavLink>
-            </li>
-            <li className="mt-3">
-              <NavLink to="/admin/updateimages">Update images</NavLink>
-            </li>
-          </div>
-        </div>
+     
         <div class="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
           <input type="checkbox" class="peer" />
           <div class="collapse-title  font-bold">Services</div>

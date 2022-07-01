@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import myimage from "../../../image/my-image.png";
 import Typed from "react-typed"
+import { useQuery } from "react-query";
+import Spiner from "../Dashboard/Spiner";
+import { useState } from "react";
 
 
 const Banner = () => {
+  const [titleFlag,setTitleFLag] = useState([])
+  
+  const {data,refetch,isLoading}= useQuery("banner",()=> fetch("http://localhost:5000/banner").then(res=>res.json()))
+ 
+  useEffect(()=>{
+  fetch("http://localhost:5000/skillflag")
+  .then(res=>res.json())
+  .then(data=> setTitleFLag(data))
+  
+ },[])
+ 
+
+ 
+
+  if(isLoading){
+    return <Spiner/>
+  }
   return (
     <section className="bg-primary " id="home">
      
@@ -12,19 +32,13 @@ const Banner = () => {
           <div className="flex-1 flex justify-center md:justify-start items-center">
             <div>
               <h1 class="text-5xl font-bold text-base-100 text-center md:text-left">
-                I'm Hossain Mohammad Rahim
+                I'm <span className="capitalize"> {data?.name}</span>
               </h1>
               <p className="text-base-100 mt-2 text-2xl text-center md:text-left">
                 I'm a{" "}
                 <span className="text-secondary">
                 <Typed
-      strings={[
-            "Full Stack Developer.",
-            "Front-end Developer.",
-            "Backend Developer.",
-            "Mern stack Developer.",
-           
-          ]}
+      strings={titleFlag.map(flag=> flag.name+".")}
           typeSpeed={100}
           backSpeed={50}
           loop
@@ -32,17 +46,17 @@ const Banner = () => {
                 </span>
               </p>
               <p class="py-6 text-base-100 text-center md:text-left">
-              Full-Stack Web Developer with knowledge of HTML5,CSS3,JavaScript ReactJs NextJs, Redux, Typescript, ExpressJs, NodeJs, MongoDB. Also has experience with developing backend APIs using JavaScript web frameworks.
+              {data.about}
               </p>
               <div className="flex justify-center md:justify-start">
                 <button class="btn btn-secondary rounded-full px-8">
-                  Hire Me
+                  {data.button}
                 </button>
               </div>
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <img src={myimage} class="z-0" />
+            <img src={data.image} class="z-0" />
           </div>
         </div>
       </div>

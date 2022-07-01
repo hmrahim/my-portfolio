@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 import logo from "../../../image/logo.png"
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from "../../../firebase.init";
+import { useQuery } from "react-query";
+import Spiner from "../Dashboard/Spiner";
 
 const Header = () => {
+  
+  const {data,refetch,isLoading}= useQuery("banner",()=> fetch("http://localhost:5000/banner").then(res=>res.json()))
+ 
   const menu = (
     <>
       <li>
@@ -33,6 +38,10 @@ const Header = () => {
 
     </>
   );
+  if(isLoading){
+    return <Spiner/>
+  }
+  refetch()
   return (
     <div className="bg-primary text-base-100 fixed left-0 right-0 z-50 top-0">
       <div class="navbar  w-full md:w-4/5 mx-auto lg:w-4/5 mx-auto">
@@ -63,7 +72,7 @@ const Header = () => {
           </div>
           <a class="">
            
-            <img src={logo} alt="Logo" width={80}  />
+            <img src={data.logo} alt="Logo" width={80}  />
            
             </a>
         </div>

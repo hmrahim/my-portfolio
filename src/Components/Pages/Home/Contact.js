@@ -4,8 +4,13 @@ import location from "../../../image/icon/location.png";
 import mobile from "../../../image/icon/smartphone.png";
 import email from "../../../image/icon/message.png";
 import { ToastContainer, toast } from 'react-toastify';
+import {useQuery} from "react-query"
+import Spiner from "../Dashboard/Spiner";
 
 const Contact = () => {
+  const {data,refetch,isLoading}= useQuery("contact",()=> fetch("http://localhost:5000/contact").then(res=>res.json()))
+ 
+ 
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +32,10 @@ const Contact = () => {
         }
       );
   };
+  if(isLoading){
+    return <Spiner/>
+  }
+  refetch()
   return (
     <div
       className="w-full md:w-4/5 lg:w-4/5 mx-auto mt-10 px-6 md:px-0 py-5"
@@ -35,7 +44,7 @@ const Contact = () => {
       {/* <h1 className='text-4xl font-semibold text-center mb-8'>Contact</h1> */}
       <div className="flex flex-col md:flex-row lg:flex-row gap-5">
         <div className="flex-1">
-          <h1 className=" font-semibold text-4xl ">Get In Touch</h1>
+          <h1 className=" font-semibold text-4xl ">{data.title}</h1>
           <div className="flex gap-4 mt-5">
             <img
               src={location}
@@ -44,7 +53,7 @@ const Contact = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Address</h3>
-              <p className="text-base-400">Brahmanbaria,Bangladesh</p>
+              <p className="text-base-400">{data.address}</p>
             </div>
           </div>
           <div className="flex gap-4 mt-5">
@@ -55,7 +64,7 @@ const Contact = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="text-base-400">+88 01886 463 596</p>
+              <p className="text-base-400">{data.phone}</p>
             </div>
           </div>
           <div className="flex gap-4 mt-5">
@@ -66,7 +75,7 @@ const Contact = () => {
             />
             <div>
               <h3 className="text-xl font-semibold">Email</h3>
-              <p className="text-base-400">h.m.rahimnet@gmail.com</p>
+              <p className="text-base-400">{data.email}</p>
             </div>
           </div>
         </div>

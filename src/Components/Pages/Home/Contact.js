@@ -8,7 +8,7 @@ import {useQuery} from "react-query"
 import Spiner from "../Dashboard/Spiner";
 
 const Contact = () => {
-  const {data,refetch,isLoading}= useQuery("contact",()=> fetch("http://localhost:5000/contact").then(res=>res.json()))
+  const {data,refetch,isLoading}= useQuery("contact",()=> fetch("https://polar-beach-10719.herokuapp.com/contact").then(res=>res.json()))
  
  
   const form = useRef();

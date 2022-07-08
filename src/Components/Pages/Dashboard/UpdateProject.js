@@ -11,7 +11,7 @@ import Spiner from './Spiner';
 
 const UpdateProject = () => {
     const {id} = useParams()
-    const {data,refetch,isLoading} = useQuery(["project",id],()=> fetch(`http://localhost:5000/project/${id}`).then(res =>res.json() ))
+    const {data,refetch,isLoading} = useQuery(["project",id],()=> fetch(`https://polar-beach-10719.herokuapp.com/project/${id}`).then(res =>res.json() ))
    
    
     
@@ -26,7 +26,7 @@ const UpdateProject = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/project/${id}`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/project/${id}`,{
         method:"PATCH",
         headers:{
             "Content-Type": "Application/json"

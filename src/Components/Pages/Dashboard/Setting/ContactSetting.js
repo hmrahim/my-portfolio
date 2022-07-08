@@ -10,7 +10,7 @@ import Spiner from '../Spiner';
 const ContactSetting = () => {
   
     
-    const {data,refetch,isLoading,error} = useQuery("about",()=> fetch(`http://localhost:5000/contact`).then(res=>res.json() ))
+    const {data,refetch,isLoading,error} = useQuery("about",()=> fetch(`https://polar-beach-10719.herokuapp.com/contact`).then(res=>res.json() ))
     const id = data?._id
     
     
@@ -24,7 +24,7 @@ const ContactSetting = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/contact/${id}`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/contact/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type": "Application/json"

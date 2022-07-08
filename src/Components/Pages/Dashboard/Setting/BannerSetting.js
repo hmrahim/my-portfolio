@@ -9,7 +9,7 @@ import Spiner from '../Spiner';
 
 const BannerSetting = () => {
     
-    const {data,refetch,isLoading,error} = useQuery("banner",()=> fetch(`http://localhost:5000/banner`).then(res=>res.json() ))
+    const {data,refetch,isLoading,error} = useQuery("banner",()=> fetch(`https://polar-beach-10719.herokuapp.com/banner`).then(res=>res.json() ))
     const id = data?._id
    
     
@@ -23,7 +23,7 @@ const BannerSetting = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/banner/${id}`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/banner/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type": "Application/json"

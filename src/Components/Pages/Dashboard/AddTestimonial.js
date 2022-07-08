@@ -20,7 +20,7 @@ const AddTestimonial = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/testimonial`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/testimonial`,{
         method:"POST",
         headers:{
             "Content-Type": "Application/json"

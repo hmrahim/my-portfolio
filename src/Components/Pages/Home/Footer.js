@@ -6,7 +6,7 @@ import {useQuery} from "react-query"
 import Spiner from "../Dashboard/Spiner";
 
 const Footer = () => {
-  const {data,refetch,isLoading}= useQuery("footer",()=> fetch("http://localhost:5000/footer").then(res=>res.json()))
+  const {data,refetch,isLoading}= useQuery("footer",()=> fetch("https://polar-beach-10719.herokuapp.com/footer").then(res=>res.json()))
  
   if(isLoading){
     return <Spiner/>

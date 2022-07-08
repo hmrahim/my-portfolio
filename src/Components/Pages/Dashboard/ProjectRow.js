@@ -15,7 +15,7 @@ const ProjectRow = ({index,refetch, project}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/project/${id}`,{
+                fetch(`https://polar-beach-10719.herokuapp.com/project/${id}`,{
                     method:"DELETE",
                     headers:{
                         "content-type": "application/json"

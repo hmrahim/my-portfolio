@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import Spiner from "../Spiner";
 
 const TitleFlag = () => {
-  const {data,isLoading,refetch} = useQuery("skillFlag",()=> fetch("http://localhost:5000/skillflag").then(res=> res.json()))
+  const {data,isLoading,refetch} = useQuery("skillFlag",()=> fetch("https://polar-beach-10719.herokuapp.com/skillflag").then(res=> res.json()))
   console.log(data);
   
   if(isLoading){

@@ -6,7 +6,7 @@ import Spiner from './Spiner';
 import TestimonialRow from './TestimonialRow';
 
 const AllTestimonial = () => {
-    const {data,refetch,isLoading} = useQuery("services",()=> fetch("http://localhost:5000/testimonial").then(res =>res.json() ))
+    const {data,refetch,isLoading} = useQuery("services",()=> fetch("https://polar-beach-10719.herokuapp.com/testimonial").then(res =>res.json() ))
 
 
    if(isLoading){

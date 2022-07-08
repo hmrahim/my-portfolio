@@ -17,7 +17,7 @@ const TestimonialRow = ({index,refetch,testimonial}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/testimonial/${id}`,{
+                fetch(`https://polar-beach-10719.herokuapp.com/testimonial/${id}`,{
                     method:"DELETE",
                     headers:{
                         "content-type": "application/json"

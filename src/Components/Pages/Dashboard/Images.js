@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 
 const Images = () => {
-    const {data,isLoading,refetch} = useQuery("images",()=> fetch("http://localhost:5000/images").then(res=> res.json()))
+    const {data,isLoading,refetch} = useQuery("images",()=> fetch("https://polar-beach-10719.herokuapp.com/images").then(res=> res.json()))
 
 console.log(data?.slice(0)[0].logo)
     refetch()

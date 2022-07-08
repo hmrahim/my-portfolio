@@ -9,7 +9,7 @@ import Spiner from '../Spiner';
 
 const FooterSetting = () => {
     
-    const {data,refetch,isLoading,error} = useQuery("about",()=> fetch(`http://localhost:5000/footer`).then(res=>res.json() ))
+    const {data,refetch,isLoading,error} = useQuery("about",()=> fetch(`https://polar-beach-10719.herokuapp.com/footer`).then(res=>res.json() ))
     const id = data?._id
     
     
@@ -23,7 +23,7 @@ const FooterSetting = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/footer/${id}`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/footer/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type": "Application/json"

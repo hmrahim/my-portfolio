@@ -16,7 +16,7 @@ import { useQuery } from "react-query";
 import Spiner from "../Dashboard/Spiner";
 
 const Testimonial = () => {
-  const {data,refetch,isLoading} = useQuery("testimonial",()=> fetch("http://localhost:5000/testimonial").then(res=>res.json()))
+  const {data,refetch,isLoading} = useQuery("testimonial",()=> fetch("https://polar-beach-10719.herokuapp.com/testimonial").then(res=>res.json()))
     const testimonials = [
         {
             name:"HM RAHIM",

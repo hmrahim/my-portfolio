@@ -11,7 +11,7 @@ import Spiner from './Spiner';
 const UpdateTestimonial = () => {
     const {id} = useParams()
 
-    const {data,isLoading,refetch} = useQuery(["testimonial",id],()=> fetch(`http://localhost:5000/testimonial/${id}`).then(res=>res.json()))
+    const {data,isLoading,refetch} = useQuery(["testimonial",id],()=> fetch(`https://polar-beach-10719.herokuapp.com/testimonial/${id}`).then(res=>res.json()))
   
     
    
@@ -25,7 +25,7 @@ const UpdateTestimonial = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/testimonial/${id}`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/testimonial/${id}`,{
         method:"PATCH",
         headers:{
             "Content-Type": "Application/json"

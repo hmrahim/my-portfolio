@@ -12,7 +12,7 @@ const AddFlag = () => {
 
     const onsubmit = data => {
 
-        fetch(`http://localhost:5000/skillflag`,{
+        fetch(`https://polar-beach-10719.herokuapp.com/skillflag`,{
             method:"POST",
             headers:{
                 "Content-Type": "Application/json"

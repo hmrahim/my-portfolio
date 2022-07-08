@@ -12,7 +12,7 @@ import Spiner from "../Dashboard/Spiner";
 const Projects = () => {
    
 
-    const {data,refetch,isLoading}= useQuery("project",()=> fetch("http://localhost:5000/project").then(res=>res.json()))
+    const {data,refetch,isLoading}= useQuery("project",()=> fetch("https://polar-beach-10719.herokuapp.com/project").then(res=>res.json()))
 
     if(isLoading){
       return <Spiner/>

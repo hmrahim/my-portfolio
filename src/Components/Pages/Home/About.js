@@ -5,7 +5,7 @@ import Spiner from "../Dashboard/Spiner";
 import Skill from "./Skill";
 const About = () => {
   
-  const {data,refetch,isLoading}= useQuery("about",()=> fetch("http://localhost:5000/about").then(res=>res.json()))
+  const {data,refetch,isLoading}= useQuery("about",()=> fetch("https://polar-beach-10719.herokuapp.com/about").then(res=>res.json()))
  
   if(isLoading){
     return <Spiner/>

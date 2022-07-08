@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const UpdateService = () => {
     const {id} = useParams()
-    const {data,refetch,isLoading,error} = useQuery(["services",id],()=> fetch(`http://localhost:5000/services/${id}`).then(res=>res.json() ))
+    const {data,refetch,isLoading,error} = useQuery(["services",id],()=> fetch(`https://polar-beach-10719.herokuapp.com/services/${id}`).then(res=>res.json() ))
  
 
     const {register,handleSubmit,formState:{errors},reset} = useForm()
@@ -19,7 +19,7 @@ const UpdateService = () => {
 
     const onsubmit = data => {
       
-        fetch(`http://localhost:5000/services/${id}`,{
+        fetch(`https://polar-beach-10719.herokuapp.com/services/${id}`,{
             method:"PATCH",
             headers:{
                 "Content-Type": "Application/json"

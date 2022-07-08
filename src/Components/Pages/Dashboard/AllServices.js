@@ -4,7 +4,7 @@ import ServiceRow from './ServiceRow';
 import Spiner from './Spiner';
 
 const AllServices = () => {
-    const {data,refetch,isLoading} = useQuery("services",()=> fetch("http://localhost:5000/services").then(res =>res.json() ))
+    const {data,refetch,isLoading} = useQuery("services",()=> fetch("https://polar-beach-10719.herokuapp.com/services").then(res =>res.json() ))
 
 
    if(isLoading){

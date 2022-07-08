@@ -10,7 +10,7 @@ import Service from "./Service";
 
 
 const Services = () => {
-  const {data,isLoading,refetch} = useQuery("services",()=> fetch("http://localhost:5000/services").then(res=>res.json()))
+  const {data,isLoading,refetch} = useQuery("services",()=> fetch("https://polar-beach-10719.herokuapp.com/services").then(res=>res.json()))
 
   if(isLoading){
     return <Spiner/>

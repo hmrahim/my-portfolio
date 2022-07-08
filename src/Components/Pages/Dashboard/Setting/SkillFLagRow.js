@@ -15,7 +15,7 @@ const SkillFLagRow = ({flag,refetch,index}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/skillflag/${id}`,{
+                fetch(`https://polar-beach-10719.herokuapp.com/skillflag/${id}`,{
                     method:"DELETE",
                     headers:{
                         "content-type": "application/json"

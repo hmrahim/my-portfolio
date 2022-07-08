@@ -23,7 +23,7 @@ const AddProject = () => {
 
     const onsubmit = data => {
       
-      fetch(`http://localhost:5000/project`,{
+      fetch(`https://polar-beach-10719.herokuapp.com/project`,{
         method:"POST",
         headers:{
             "Content-Type": "Application/json"

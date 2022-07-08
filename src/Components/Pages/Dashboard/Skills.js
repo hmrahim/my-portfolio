@@ -6,7 +6,7 @@ const Skills = () => {
     const {register,handleSubmit,formState:{errors},reset} = useForm()
 
     const onsubmit = data => {
-        fetch("http://localhost:5000/skill",{
+        fetch("https://polar-beach-10719.herokuapp.com/skill",{
             method:"POST",
             headers:{
                 "Content-Type": "Application/json"

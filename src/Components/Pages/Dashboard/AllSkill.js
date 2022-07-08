@@ -3,7 +3,7 @@ import {useQuery} from "react-query"
 import SkillRow from "./SkillRow";
 import Spiner from "./Spiner";
 const AllSkill = () => {
-    const {data,isLoading,refetch,error} = useQuery("data",()=> fetch("http://localhost:5000/skill").then(res =>res.json()))
+    const {data,isLoading,refetch,error} = useQuery("data",()=> fetch("https://polar-beach-10719.herokuapp.com/skill").then(res =>res.json()))
 console.log(data)
     if(isLoading){
         return <Spiner/>

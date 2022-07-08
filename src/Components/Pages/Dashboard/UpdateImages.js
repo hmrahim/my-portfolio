@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const UpdateImages = () => {
-    const {data,refetch,isLoading} = useQuery("images",()=> fetch("http://localhost:5000/images").then(res=> res.json()))
+    const {data,refetch,isLoading} = useQuery("images",()=> fetch("https://polar-beach-10719.herokuapp.com/images").then(res=> res.json()))
  const id = data?.slice(0)[0]._id
  
 
@@ -18,7 +18,7 @@ const UpdateImages = () => {
 
     const onsubmit = data => {
       
-        fetch(`http://localhost:5000/images/${id}`,{
+        fetch(`https://polar-beach-10719.herokuapp.com/images/${id}`,{
             method:"put",
             headers:{
                 "Content-Type": "Application/json"

@@ -8,7 +8,7 @@ import Spiner from "../Dashboard/Spiner";
 
 const Header = () => {
   
-  const {data,refetch,isLoading}= useQuery("banner",()=> fetch("http://localhost:5000/banner").then(res=>res.json()))
+  const {data,refetch,isLoading}= useQuery("banner",()=> fetch("https://polar-beach-10719.herokuapp.com/banner").then(res=>res.json()))
  
   const menu = (
     <>

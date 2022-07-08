@@ -9,7 +9,7 @@ const AddFlag = () => {
     const {register,handleSubmit,formState:{errors},reset} = useForm()
     const navigate = useNavigate()
     const {id} = useParams()
-    const {data,refetch,isLoading,error} = useQuery(["skillFlag",id],()=> fetch(`http://localhost:5000/skillflag/${id}`).then(res=>res.json() ))
+    const {data,refetch,isLoading,error} = useQuery(["skillFlag",id],()=> fetch(`https://polar-beach-10719.herokuapp.com/skillflag/${id}`).then(res=>res.json() ))
     
 
     const {} = useQuery
@@ -20,7 +20,7 @@ const AddFlag = () => {
 
     const onsubmit = data => {
 
-        fetch(`http://localhost:5000/skillflag/${id}`,{
+        fetch(`https://polar-beach-10719.herokuapp.com/skillflag/${id}`,{
             method:"PATCH",
             headers:{
                 "Content-Type": "Application/json"

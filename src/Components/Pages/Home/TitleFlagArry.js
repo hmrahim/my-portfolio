@@ -14,6 +14,7 @@ if(isLoading){
     return <Spiner/>
 }
   
+refetch()
   return (
     <span className="text-secondary">
       <Typed

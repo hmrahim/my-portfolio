@@ -142,18 +142,9 @@ const AddProject = () => {
                   type="url"
                   placeholder="Server Site url"
                   className="input input-bordered w-full "
-                  {...register("server",{
-                      required:{
-                          value:true,
-                          message:"Server Site url field is required"
-                      }
-                  })}
+                  {...register("server")}
                 />
-                <label className="label">
-                  {errors?.server?.type === "required" && <span className="label-text-alt text-red-500">{errors.server.message}</span>}
-                  
               
-                </label>
               </div>
               <div className="form-control w-full ">
                 <label className="label">

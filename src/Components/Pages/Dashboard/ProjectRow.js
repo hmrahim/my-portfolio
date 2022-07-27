@@ -40,7 +40,14 @@ const ProjectRow = ({index,refetch, project}) => {
     return (
         <tr>
         <td className="text-center">{index +1}</td>
-        <td className="text-center">{project.ssu?.slice(0,20)+"..."}</td>
+        <td className="text-center">
+        <div class="avatar">
+  <div class="w-20 rounded">
+    <img src={project.ssu} alt="Tailwind-CSS-Avatar-component" />
+  </div>
+</div>
+            
+            </td>
         <td className="text-center">{project.name}</td>
         <td className="text-center">{project.tech?.slice(0,20)+"..."}</td>
         <td className="text-center">{project.client?.slice(0,20)+"..."}</td>
